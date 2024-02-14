@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">AppTic12</string>
+    <string name="escolha_pedido">Escolha seu pedido</string>
+    <string name="entrada">Entradas</string>
+    <string name="salada">Salada de alface(05min)</string>
+    <string name="caponata">Caponata de repolho(10min)</string>
+    <string name="guacamole">Guacamole(10min)</string>
+    <string name="fondue">Fondue(15min)</string>
+    <string name="price_salada">R$ 15,00</string>
+    <string name="price_guacamole">R$ 20,00</string>
+    <string name="price_caponata">R$ 15,00</string>
+    <string name="price_fondue">R$ 25,00</string>
+    <string name="principal">Principal</string>
+    <string name="paillard">Paillard de filet(15min)</string>
+    <string name="price_paillard">R$ 50,00</string>
+    <string name="steak">Steak tartare(35min)</string>
+    <string name="price_steak">R$ 80,00</string>
+    <string name="bebidas">Bebidas</string>
+    <string name="coca">Coca-Cola 1L(01min)</string>
+    <string name="agua">Água 400ml(01min)</string>
+    <string name="price_coca"> R$ 9,00</string>
+    <string name="price_agua"> R$ 4,00</string>
+    <string name="sobremesas">Sobremesas</string>
+    <string name="abacaxi">Delícia de abacaxi(01min)</string>
+    <string name="price_abacaxi">R$ 25,00</string>
+    <string name="morango">Delícia de morango(01min)</string>
+    <string name="price_morango">R$ 25,00</string>
+    <string name="totalSpent">Total:</string>
+    <string name="totalValue">R$ 0,00</string>
+    <string name="Observacoes">Digite suas observações</string>
+    <string name="Calculate">Calcular</string>
+    <string name="Order">Realizar Pedido</string>
 </resources>

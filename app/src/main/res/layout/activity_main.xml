@@ -1,23 +1,510 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFF0E1"
-    tools:context=".MainActivity">
+    android:background="@color/PrimaryColor">
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        tools:context=".MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="128dp"
-        android:src="@drawable/Screenshot_2"
-        tools:ignore="MissingConstraints"
-         />
+        android:layout_height="64dp"
+        android:src="@drawable/logo"
+        tools:ignore="MissingConstraints" />
 
+    <View
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/SecundaryColor"
+        android:focusable="false"
+        />
     <TextView
+        android:id="@+id/escolha_pedido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Escolha seu pedido"
-        />
+        android:layout_marginLeft="132dp"
+        android:fontFamily="@font/oleo_script_bold"
+        android:text="@string/escolha_pedido"
+        android:textColor="@color/SecundaryColor"
+        android:textSize="16sp"
+        android:layout_below="@id/separador" />
+
+    <TextView
+        android:id="@+id/entrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oleo_script_bold"
+        android:text="@string/entrada"
+        android:textColor="@color/SecundaryColor"
+        android:layout_marginTop="64dp"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/separador_entradas"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/SecundaryColor"
+        android:focusable="false"
+        android:layout_below="@id/entrada" />
+
+    <LinearLayout
+        android:id="@+id/separator_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/separador_entradas">
+
+        <CheckBox
+            android:id="@+id/checkbox1_entrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:text="@string/salada"
+            android:textColor="@color/SecundaryColor"
+            android:layout_below="@id/separador_entradas"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/price_salada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_salada"
+            android:textColor="@color/SecundaryColor"
+            android:layout_marginLeft="64dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:layout_marginTop="8dp"
+            />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/separator_layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/separator_layout1">
+
+        <CheckBox
+            android:id="@+id/checkbox2_entrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:text="@string/caponata"
+            android:textColor="@color/SecundaryColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/price_caponata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_caponata"
+            android:textColor="@color/SecundaryColor"
+            android:layout_marginLeft="32dp"
+            android:fontFamily="@font/oleo_script_bold"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/separator_layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/separator_layout2">
+
+        <CheckBox
+            android:id="@+id/checkbox3_entrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:text="@string/guacamole"
+            android:textColor="@color/SecundaryColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/price_guacamole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_guacamole"
+            android:textColor="@color/SecundaryColor"
+            android:layout_marginLeft="90dp"
+            android:fontFamily="@font/oleo_script_bold"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/separator_layout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/separator_layout3">
+
+        <CheckBox
+            android:id="@+id/checkbox4_entrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:text="@string/fondue"
+            android:textColor="@color/SecundaryColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/price_fondue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_fondue"
+            android:textColor="@color/SecundaryColor"
+            android:layout_marginLeft="115dp"
+            android:fontFamily="@font/oleo_script_bold"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+                              <!-- principal -->
+
+
+
+    <TextView
+        android:layout_below="@id/separator_layout4"
+        android:id="@+id/principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oleo_script_bold"
+        android:text="@string/principal"
+        android:textColor="@color/SecundaryColor"
+        android:textSize="16sp" />
+    <View
+        android:layout_below="@id/principal"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@color/SecundaryColor"
+        android:focusable="false"
+        />
+
+    <LinearLayout
+        android:id="@+id/separator_layout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/principal">
+
+        <CheckBox
+            android:id="@+id/checkbox1_principal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separador_entradas"
+            android:layout_marginLeft="64dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:text="@string/paillard"
+            android:textColor="@color/SecundaryColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/price_paillard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_paillard"
+            android:textColor="@color/SecundaryColor"
+            android:layout_marginLeft="64dp"
+            android:fontFamily="@font/oleo_script_bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/separator_layout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/separator_layout5">
+
+        <CheckBox
+            android:id="@+id/checkbox2_principal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:text="@string/steak"
+            android:textColor="@color/SecundaryColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/price_steak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_steak"
+            android:textColor="@color/SecundaryColor"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="@font/oleo_script_bold"
+
+            />
+
+    </LinearLayout>
+
+                              <!-- Bebidas-->
+
+
+    <TextView
+        android:layout_below="@id/separator_layout6"
+        android:id="@+id/bebidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oleo_script_bold"
+        android:text="@string/bebidas"
+        android:textColor="@color/SecundaryColor"
+        android:textSize="16sp"/>
+    <View
+        android:id="@+id/separador_bebidas"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/bebidas"
+        android:background="@color/SecundaryColor"
+        android:focusable="false"/>
+
+    <LinearLayout
+        android:id="@+id/separator_layout7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/separador_bebidas">
+
+        <CheckBox
+            android:id="@+id/checkbox1_bebidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:text="@string/coca"
+            android:textColor="@color/SecundaryColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/price_coca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_coca"
+            android:textColor="@color/SecundaryColor"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="@font/oleo_script_bold"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/separator_layout8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/separator_layout7">
+
+        <CheckBox
+            android:id="@+id/checkbox2_bebidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:text="@string/agua"
+            android:textColor="@color/SecundaryColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/price_agua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_agua"
+            android:textColor="@color/SecundaryColor"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="@font/oleo_script_bold"
+
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@id/separator_layout8"
+        android:id="@+id/sobremesas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oleo_script_bold"
+        android:text="@string/sobremesas"
+        android:textColor="@color/SecundaryColor"
+        android:textSize="24sp"/>
+
+    <View
+        android:id="@+id/separador_sobremesas"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/sobremesas"
+        android:layout_height="1dp"
+        android:background="@color/SecundaryColor"
+        android:focusable="false"
+        />
+
+    <LinearLayout
+        android:id="@+id/separator_layout9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/separador_sobremesas">
+
+        <CheckBox
+            android:id="@+id/checkbox1_sobremesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:text="@string/abacaxi"
+            android:textColor="@color/SecundaryColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/price_abacaxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_abacaxi"
+            android:textColor="@color/SecundaryColor"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/oleo_script_bold"
+            />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/separator_layout10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/separator_layout9">
+
+            <CheckBox
+                android:id="@+id/checkbox2_sobremesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64dp"
+                android:fontFamily="@font/oleo_script_bold"
+                android:text="@string/morango"
+                android:textColor="@color/SecundaryColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/price_morango"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_morango"
+                android:textColor="@color/SecundaryColor"
+                android:layout_marginLeft="32dp"
+                android:fontFamily="@font/oleo_script_bold"
+                />
+        </LinearLayout>
+        <View
+            android:id="@+id/separador_pedido"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/separator_layout10"
+            android:layout_height="1dp"
+            android:background="@color/SecundaryColor"
+            android:focusable="false"
+            />
+
+        <EditText
+            android:id="@+id/Observacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Observacoes"
+            android:inputType="text"
+            android:layout_below="@id/separador_pedido"
+            android:minHeight="48dp" />
+
+        <LinearLayout
+            android:id="@+id/separator_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/Observacoes">
+
+            <TextView
+                android:id="@+id/totalSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/totalSpent"
+                android:fontFamily="@font/oleo_script_bold"
+                android:textColor="@color/SecundaryColor"
+                android:layout_below="@id/Observacoes"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/totalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/totalValue"
+                android:fontFamily="@font/oleo_script_bold"
+                android:textColor="@color/SecundaryColor"
+                android:layout_marginLeft="24dp"
+                android:textSize="32sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/separator_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/separator_total">
+
+            <Button
+                android:id="@+id/Calculate"
+                android:layout_width="128dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/SecundaryColor"
+                android:gravity="center"
+                android:layout_marginStart="32dp"
+                android:text="@string/Calculate"
+                android:textAllCaps="true" />
+            <Button
+                android:id="@+id/Order"
+                android:layout_width="128dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="2dp"
+                android:backgroundTint="@color/SecundaryColor"
+                android:gravity="center"
+                android:layout_marginStart="32dp"
+                android:text="@string/Order"
+                android:textAllCaps="true" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
+
+
